@@ -1,0 +1,290 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Style Area-->
+    <style>
+        body {
+            background: radial-gradient(circle at center, #ff0066, #ff6699, #ff99cc, #ffccff);
+        }
+
+
+        /* Add styling for the navigation bar */
+        #navbar {
+          background-color: #888888;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 20px;
+          border-radius: 10px;
+          margin-bottom: 10px;
+          box-shadow: 3px 3px 10px #333;
+        }
+        /* Add styling for the logo */
+        #logo {
+          font-size: 1.5em;
+          font-weight: bold;
+          color: rgb(217, 255, 0);
+        }
+        /* Add styling for the navigation links */
+        #navbar a {
+          text-decoration: none;
+          color: rgb(255, 255, 255);
+          margin-right: 10px;
+        }
+
+        #navbar a:hover {
+            /* Add styling for the hover state */
+            color:red; /* change background color on hover */
+            font-size: 1.2em; /* increase font size on hover */
+            transform: translateY(-2px); /* move the element 2px up on hover */
+            transition: all 0.2s ease-in-out; /* smooth transition */
+        }
+        /* Add styling for the hero section */
+      #hero {
+        background-image: url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+        background-size: cover;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgb(231, 216, 0);
+        /* existing styles */
+        box-shadow: 3px 3px 10px #333;
+        border-radius: 10px;
+      }
+      /* Add styling for the text */
+      #hero h1 {
+        font-size: 4em;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px #333;
+      }
+     /* Add styling for the video content area */
+     #video-content {
+        display: flex; /* set the display property to flex */
+        flex-wrap: wrap; /* allow the items to wrap onto multiple lines if necessary */
+        margin: 20px; /* add a margin around the entire video content area */
+        border: 1px solid #333; /* add a 1px solid black border */
+        border-radius: 10px; /* add a border radius of 10px to create rounded corners */
+        box-shadow: 0px 0px 10px #333; /* add a shadow around the video content area */
+      }
+      /* Add styling for the embedded video */
+      .video-embed {
+        width: 20%; /* set the width of the embedded video to 20% */
+        height: 200px; /* set the height of the embedded video */
+        margin:32px;
+        border-radius: 10px; /* add a border radius of 10px to create rounded corners */
+        transition: all 0.2s ease-in-out; /* add a smooth transition for hover effect */
+        position: relative;
+      }
+      /* Add minimum distance between the videos */
+      .video-embed + .video-embed {
+        margin-left: 2%;
+      }
+      /* Add styling for the hover state of the video thumbnails */
+      .video-embed:hover {
+        transform: scale(1.1); /* increase the size of the video on hover */
+        cursor: pointer; /* change the cursor to a pointer on hover */
+        z-index: 1;
+      }
+      /* Add a title on top of the video */
+      .video-embed:before {
+        content: "YouTube Video"; /* add the title of the video */
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 10px 10px 0 0;
+      }
+      /* Add border to the embedded videos */
+        .video-embed iframe {
+            border-radius: 10px; /* add a border radius of 10px to create rounded corners */
+            border: 2px solid #333; /* add a 2px solid black border */
+        }
+        /* Add styling for the video title */
+        .video-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            color: #fff;
+            padding: 5px 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+        /* Add hover effect for the video title */
+        .video-embed:hover .video-title {
+            visibility: visible;
+            color:#ff0066;
+        }
+
+
+      /* Add styling for the footer */
+      #footer {
+        background-color: #888888;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        box-shadow: 3px 3px 10px #333;
+      }
+      /* Add styling for the logo */
+      #logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: #333;
+      }
+      /* Add styling for the contact details */
+      #footer p {
+        color: rgb(255, 255, 255);
+        margin-right: 10px;
+      }
+
+      #footer p a
+      {
+        text-decoration: none;
+        color: white;
+      }
+
+      #footer p a:hover
+      {
+        color: blue;
+        font-size: 1.2em; /* increase font size on hover */
+        transform: translateY(-2px); /* move the element 2px up on hover */
+        transition: all 0.2s ease-in-out; /* smooth transition */
+      }
+      </style>
+      <!--End Style Area-->
+
+    <title>Learning</title>
+</head>
+<body>
+    <nav id="navbar">
+        <div id="logo">E-Learning</div>
+        <a href="#video-content">Courses</a>
+        <a href="https://www.w3schools.com/" target="_blank">Web Courses</a>
+        <a href="https://engrmonyrul.github.io/portfolio.github.io/" target="_blank">About</a>
+        <a href="#footer">Contact</a>
+    </nav>
+    <section id="hero">
+        <h1>Learn & Earn</h1>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--Content Area-->
+      <div id="video-content">
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/5TwCVOyYR4U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="video-title">Add Image - Django</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 1</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>        
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+        <div class="video-embed">
+            <iframe src="https://www.youtube.com/embed/video2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-title">Video Title 2</div>
+        </div>
+    </div>
+
+      <!--End Conteant Area-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer id="footer">
+        <div id="logo">E-Learning</div>
+        <p>Email: <a href="mailto:engrmonirulislam513@gmail.com">engrmonirulislam513@gmail.com</a></p>
+        <p>Call: <a href="tel:+8801729602502">+8801729602502</a></p>
+        <p>Whatsapp: <a href="https://wa.me/8801729602502">+8801729602502</a></p>
+
+        </footer>
+</body>
+</html>
